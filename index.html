@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cadastro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela de Login</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="login-container">
-    <h2>Crie sua conta</h2>
-    <form>
-      <input type="text" placeholder="Nome completo" required />
-      <input type="email" placeholder="E-mail" required />
-      <input type="password" placeholder="Senha" required />
-      <input type="password" placeholder="Confirme a senha" required />
-      <button type="submit">Inscrever-se</button>
-    </form>
-    <p class="signup-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
+  <div class="lightning"></div>
+  <div class="raindrops"></div>
+
+  <div class="login-container" id="login">
+    <h2>Login</h2>
+    <input type="email" placeholder="E-mail" />
+    <input type="password" placeholder="Senha" />
+    <button>Entrar</button>
+    <p class="link" onclick="mostrarCadastro()">Inscrever-se</p>
   </div>
+
+  <div class="signup-container" id="cadastro" style="display: none;">
+    <h2>Cadastro</h2>
+    <input type="email" placeholder="E-mail" />
+    <input type="password" placeholder="Senha" />
+    <input type="text" placeholder="CPF" />
+    <button onclick="voltarLogin()">Concluir</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
